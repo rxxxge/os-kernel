@@ -54,6 +54,9 @@ void outportb(unsigned short _port, unsigned char _data) {
 
 int kmain(void) {
     /* Add commands here */
+    gdt_install();
+    // idt_install();
+
     init_video();
     settextcolor(0x0D, 0x00);
     puts("Hello Sofiaaaa\n");
